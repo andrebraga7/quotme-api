@@ -11,6 +11,6 @@ class AuthorList(generics.ListCreateAPIView):
 
 
 class AuthorDetail(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = [IsStaffOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = AuthorSerializer
     queryset = Author.objects.all()

@@ -13,4 +13,5 @@ urlpatterns = [
     ),
     path('', include('profiles.urls')),
     path('', include('authors.urls')),
+    path('', include('quotes.urls')),
 ]
