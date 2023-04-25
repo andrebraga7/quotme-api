@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from rest_framework import generics
+from .models import Quote
 
-# Create your views here.
+
+class QuoteList(generics.ListCreateAPIView):
+    queryset = Quote.objects.all()
