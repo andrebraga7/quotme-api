@@ -96,6 +96,7 @@ INSTALLED_APPS = [
     # Project apps
     'profiles',
     'authors',
+    'quotes',
 
 ]
 
