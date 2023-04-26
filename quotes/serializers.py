@@ -5,6 +5,7 @@ from .models import Quote
 class QuoteSerializer(serializers.ModelSerializer):
 
     owner = serializers.ReadOnlyField(source='owner.username')
+    author = serializers.CharField()
 
     class Meta:
         model = Quote
