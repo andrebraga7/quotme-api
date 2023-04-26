@@ -27,7 +27,9 @@ class QuoteDetail(generics.RetrieveUpdateDestroyAPIView):
 
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = QuoteSerializer
-    queryset = Quote.objects.all()
+    queryset = Quote.objects.annotate(
+        likes_count=Count('likes', distinct=True)
+    )
 
     def perform_update(self, serializer):
         # Same logic as the perform_create but this will run when updating
