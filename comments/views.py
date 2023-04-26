@@ -1,3 +1,4 @@
+from django.db.models import Count
 from rest_framework import generics, permissions
 from quotme_api.permissions import IsOwnerOrReadOnly
 from .models import Comment
@@ -8,7 +9,9 @@ class CommentList(generics.ListCreateAPIView):
 
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = CommentSerializer
-    queryset = Comment.objects.all()
+    queryset = Comment.objects.annotate(
+        replies_count=Count('reply', distinct=True)
+    )
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
