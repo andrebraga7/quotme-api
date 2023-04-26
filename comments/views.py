@@ -21,4 +21,6 @@ class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
 
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = CommentDetailSerializer
-    queryset = Comment.objects.all()
+    queryset = Comment.objects.annotate(
+        replies_count=Count('reply', distinct=True)
+    )
