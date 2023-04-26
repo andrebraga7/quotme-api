@@ -15,4 +15,5 @@ urlpatterns = [
     path('', include('authors.urls')),
     path('', include('quotes.urls')),
     path('', include('likes.urls')),
+    path('', include('saved.urls')),
 ]

@@ -9,5 +9,5 @@ class SaveSerializer(serializers.ModelSerializer):
     class Meta:
         model = Save
         fields = [
-            'id', 'owner', 'quote', 'created_at '
+            'id', 'owner', 'quote', 'created_at'
         ]
