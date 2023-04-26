@@ -12,3 +12,10 @@ class ReplyList(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+
+
+class ReplyDetail(generics.RetrieveUpdateDestroyAPIView):
+
+    permission_classes = [IsOwnerOrReadOnly]
+    serializer_class = ReplyDetailSerializer
+    queryset = Reply.objects.all()
