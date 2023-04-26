@@ -99,6 +99,7 @@ INSTALLED_APPS = [
     'quotes',
     'likes',
     'saved',
+    'comments',
 
 ]
 
