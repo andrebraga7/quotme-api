@@ -12,3 +12,10 @@ class SaveList(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         return serializer.save(owner=self.request.user)
+
+
+class SaveDetail(generics.RetrieveDestroyAPIView):
+
+    permission_classes = [IsOwnerOrReadOnly]
+    serializer_class = SaveSerializer
+    queryset = Save.objects.all()
