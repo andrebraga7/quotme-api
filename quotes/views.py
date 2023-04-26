@@ -1,3 +1,4 @@
+from django.db.models import Count
 from rest_framework import generics, permissions
 from .models import Quote
 from authors.models import Author
@@ -9,7 +10,9 @@ class QuoteList(generics.ListCreateAPIView):
 
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = QuoteSerializer
-    queryset = Quote.objects.all()
+    queryset = Quote.objects.annotate(
+        likes_count=Count('likes', distinct=True)
+    ).order_by('-created_at')
 
     def perform_create(self, serializer):
         # Retrieve the author name from the serializer validated_data
