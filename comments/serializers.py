@@ -12,3 +12,8 @@ class CommentSerializer(serializers.ModelSerializer):
             'id', 'owner', 'quote', 'created_at', 'updated_at',
             'content'
         ]
+
+
+class CommentDetailSerializer(CommentSerializer):
+
+    quote = serializers.ReadOnlyField(source='quote.id')
