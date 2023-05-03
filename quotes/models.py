@@ -10,7 +10,7 @@ class Quote(models.Model):
         ('lyrics', 'Lyrics'),
         ('statements', 'Statements'),
         ('originals', 'Originals'),
-        ('out_of_the_box', 'Out of the box')
+        ('out of the box', 'Out of the box')
     )
 
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
