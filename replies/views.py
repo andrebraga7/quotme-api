@@ -18,10 +18,11 @@ class ReplyList(generics.ListCreateAPIView):
     ]
     filterset_fields = [
         'comment__quote',
+        'comment',
     ]
     search_fields = [
         'id',
-        'quote',
+        'comment',
     ]
     ordering_fields = [
         'updated_at',
