@@ -119,7 +119,7 @@ MIDDLEWARE = [
 ]
 
 if 'CLIENT_ORIGIN' in os.environ:
-    CORS_ALLOWED_ORIGINS = os.environ.get('CLIENT_ORIGIN').split()
+    CORS_ALLOWED_ORIGINS = os.environ.get('CLIENT_ORIGIN').split(" ")
 
 if 'CLIENT_ORIGIN_DEV' in os.environ:
     extracted_url = re.match(
