@@ -24,6 +24,7 @@ class QuoteList(generics.ListCreateAPIView):
     filterset_fields = [
         'owner__followed__owner__profile',
         'likes__owner__profile',
+        'saved__owner__profile',
         'owner__profile',
         'category',
         'author',
