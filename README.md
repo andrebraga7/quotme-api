@@ -34,6 +34,8 @@ The Django built in user model was used along with the following custom models:
 
 ![ERD](assets/readme-images/erd.png)
 
+[Back to top](#table-of-content)
+
  # **Technologies used**
 
  ## Languages
