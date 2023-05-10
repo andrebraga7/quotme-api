@@ -6,7 +6,7 @@ Quotme API was developed to serve [Quotme](https://quotme.herokuapp.com) front e
 - [**User Stories**](#user-stories)
 - [**Data Model**](#erd---entity-relatinship-diagram)
 - [**Technologies Used**](#technologies-used)
-- [**Testing**]()
+- [**Testing**](#testing)
 - [**Known Bugs**](#known-bugs)
 - [**Deployment**](#deployment)
 - [**Credits**](#credits)
@@ -74,8 +74,6 @@ In the list below are all the libraries used in the project, these are located i
 
 # **Testing**
 All code was passed throught the CI PEP Linter with no issues. During the development process the Prettier extension was used to check the code as it was being typed, this ensured code errors where being fixed during development.
-
-## Automnated testing
 
 ## Manual testing
 Manual testing was performed throughout development, ensuring the database was being updated as expected when creating, reading, updating or deleting data, where appropriate.
