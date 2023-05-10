@@ -6,9 +6,11 @@ Quotme API was developed to serve [Quotme](https://quotme.herokuapp.com) front e
 - [**User Stories**](#user-stories)
 - [**Data Model**](#erd---entity-relatinship-diagram)
 - [**Technologies Used**](#technologies-used)
-- [**Validator Testing**]()
-- [**Known Bugs**]()
+- [**Testing**]()
+- [**Known Bugs**](#known-bugs)
 - [**Deployment**](#deployment)
+- [**Credits**](#credits)
+- [**Acknowledgement**](#acknowledgements)
 
 # User Stories
 In order to plan the develop of the project I created the following issues using **Github Board**:
@@ -35,7 +37,6 @@ The Django built in user model was used along with the following custom models:
  # **Technologies used**
 
  ## Languages
-
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Provides the functionality for the backend API.
 
 ## Frameworks & Software
@@ -48,7 +49,6 @@ The Django built in user model was used along with the following custom models:
 - [CI PEP8 Linter](https://pep8ci.herokuapp.com/) - used to validate the Python code.
 
 ## Libraries
-
 In the list below are all the libraries used in the project, these are located in *requirements.txt*:
 
 - [asgiref](https://pypi.org/project/asgiref/) - ASGI is a standard for Python asynchronous web apps and servers to communicate with each other, and positioned as an asynchronous successor to WSGI;
@@ -72,10 +72,20 @@ In the list below are all the libraries used in the project, these are located i
 
 [Back to top](#table-of-content)
 
+# **Testing**
+All code was passed throught the CI PEP Linter with no issues. During the development process the Prettier extension was used to check the code as it was being typed, this ensured code errors where being fixed during development.
+
+## Automnated testing
+
+## Manual testing
+Manual testing was performed throughout development, ensuring the database was being updated as expected when creating, reading, updating or deleting data, where appropriate.
+
+# **Known Bugs**
+There are currently no known bugs in this project.
+
 # **Deployment**
 
 ## Deployment To Heroku
-
 The project was deployed to [Heroku](https://www.heroku.com). To deploy, please follow the steps below:
 
 1. Navigate to your [Heroku dashboard](https://dashboard.heroku.com/apps).
@@ -115,7 +125,6 @@ The project was deployed to [Heroku](https://www.heroku.com). To deploy, please 
 [Back to top](#table-of-content)
 
 ## How To Fork The Repository On GitHub
-
 It is possible to do a independent copy of a GitHub Repository by forking the GitHub account. The copy can then be viewed and it is also possible to do changes in the copy without affecting the original repository. To fork the repository, take these steps:
 
 1. After logging in to GitHub, locate the repository. On the top right side of the page there is a 'Fork' button. Click on the button to create a copy of the original repository.
@@ -123,7 +132,6 @@ It is possible to do a independent copy of a GitHub Repository by forking the Gi
 [Back to top](#table-of-content)
 
 ## Cloning The Project
-
 To clone and set up this project you need to follow the steps below.
 
 1. When you are in the repository, find the code tab and click it.
@@ -144,11 +152,9 @@ To clone and set up this project you need to follow the steps below.
 # **Credits**
 
 ## Content
-
 - Template for readme provided by Code Institute (*with some additional changes that my mentor [Antonio Rodriguez](https://www.linkedin.com/in/antonio-rodr%C3%ADguez-bb9b99b7/))* suggested;
 
 ## Technical
-
 - I used the django rest documentation to help me understand the framework and python concepts [Django REST Documentation](https://www.django-rest-framework.org/);
 - [Stackoverflow](https://stackoverflow.com/), as always, was really helpfull with small helps and concepts explanation.
 
