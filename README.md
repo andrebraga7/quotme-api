@@ -8,6 +8,7 @@ Quotme API was developed to serve [Quotme](https://quotme.herokuapp.com) front e
 - [**Technologies Used**](#technologies-used)
 - [**Validator Testing**]()
 - [**Known Bugs**]()
+- [**Deployment**](#deployment)
 
 # User Stories
 In order to plan the develop of the project I created the following issues using **Github Board**:
@@ -130,6 +131,34 @@ To clone and set up this project you need to follow the steps below.
 3. Use an IDE and open Git Bash. Change directory to the location where you want the cloned directory to be made.
 4. Type 'git clone', and then paste the URL that you copied from GitHub. Press enter and a local clone will be created.
 5. To be able to get the project to work you need to install the requirements. This can be done by using the command below:
-* ```pip3 install -r requirements.txt``` - This command downloads and install all required dependencies that is stated in the package.json file.
+
+* ```pip3 install -r requirements.txt``` - This command downloads and install all required dependencies that is stated in the requirements file.
+
+6. The next step is to set up the environment file so that the project knows what variables that needs to be used for it to work. Environment variables are usually hidden due to sensitive information. It's very important that you don't push the env.py file to Github (this can be secured by adding env.py to the .gitignore-file). The variables that are declared in the env.py file needs to be added to the Heroku config vars. Don't forget to do necessary migrations before trying to run the server.
+
+* ```python3 manage.py migrate``` - This will do the necessary migrations.
+* ```python3 manage.py runserver``` - If everything i setup correctly the project is now live locally.
+
+[Back to top](#table-of-content)
+
+# **Credits**
+
+## Content
+
+- Template for readme provided by Code Institute (*with some additional changes that my mentor [Antonio Rodriguez](https://www.linkedin.com/in/antonio-rodr%C3%ADguez-bb9b99b7/))* suggested;
+
+## Technical
+
+- I used the django rest documentation to help me understand the framework and python concepts [Django REST Documentation](https://www.django-rest-framework.org/);
+- [Stackoverflow](https://stackoverflow.com/), as always, was really helpfull with small helps and concepts explanation.
+
+[Back to top](#table-of-content)
+
+# Acknowledgements
+Quotme-API was creates as the fifth portfolio project for the Full Stack Software Developer course from [**Code Institute**](https://codeinstitute.net). I would like to thank my mentor, [**Antonio Rodriguez**](https://www.linkedin.com/in/antonio-rodr%C3%ADguez-bb9b99b7/) for his guidance and support throught this project and the Code Institute team.
+
+I would also like to thank the most important person that helped me throughout the entire course, my wife Evellyn. She has helped me through the dificult times and encouraged me to carry on. Here we are, te amo!
+
+[**Andre Braga**](https://www.linkedin.com/in/andrestrevisan/) 2023
 
 [Back to top](#table-of-content)
