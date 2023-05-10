@@ -5,7 +5,7 @@ Quotme API was developed to serve [Quotme](https://quotme.herokuapp.com) front e
 
 - [**User Stories**](#user-stories)
 - [**Data Model**](#erd---entity-relatinship-diagram)
-- [**Technologies Used**]()
+- [**Technologies Used**](#technologies-used)
 - [**Validator Testing**]()
 - [**Known Bugs**]()
 
@@ -46,11 +46,9 @@ The Django built in user model was used along with the following custom models:
 - [Cloudinary](https://cloudinary.com/) - A service that hosts all static files in the project;
 - [CI PEP8 Linter](https://pep8ci.herokuapp.com/) - used to validate the Python code.
 
-[Back to top](#table-of-content)
-
 ## Libraries
 
-In the list below are all the libraries used in the project, these are located in *package.json*:
+In the list below are all the libraries used in the project, these are located in *requirements.txt*:
 
 - [asgiref](https://pypi.org/project/asgiref/) - ASGI is a standard for Python asynchronous web apps and servers to communicate with each other, and positioned as an asynchronous successor to WSGI;
 - [cloudinary](https://pypi.org/project/cloudinary/) - The Cloudinary Python SDK allows you to quickly and easily integrate your application with Cloudinary. Effortlessly optimize, transform, upload and manage your cloud's assets;
@@ -70,5 +68,68 @@ In the list below are all the libraries used in the project, these are located i
 - [pytz](https://pypi.org/project/pytz/) - This is a set of Python packages to support use of the OpenID decentralized identity system in your application, update to Python 3
 - [requests-oauhlib](https://pypi.org/project/requests-oauthlib/) - Provides first-class OAuth library support for Requests.
 - [sqlparse](https://pypi.org/project/sqlparse/) - sqlparse is a non-validating SQL parser for Python. It provides support for parsing, splitting and formatting SQL statements.
+
+[Back to top](#table-of-content)
+
+# **Deployment**
+
+## Deployment To Heroku
+
+The project was deployed to [Heroku](https://www.heroku.com). To deploy, please follow the steps below:
+
+1. Navigate to your [Heroku dashboard](https://dashboard.heroku.com/apps).
+
+2. Click "New" and select "Create new app".
+
+![Heroku](assets/readme-images/deploy/1.png)
+
+3. Input a meaningful name for your app and choose the region best suited to your location.
+
+![Heroku](assets/readme-images/deploy/2.png)
+
+4. Select "Deploy" from the tabs.
+
+![Heroku](assets/readme-images/deploy/3.png)
+
+5. Select "GitHub - Connect to GitHub" from deployment methods.
+
+![Heroku](assets/readme-images/deploy/4.png)
+
+6. Click "Connect to GitHub" in the created section.
+
+![Heroku](assets/readme-images/deploy/5.png)
+
+7. Search for the GitHub repository by name.
+
+8. Click to connect to the relevant repo.
+
+9. Either click `Enable Automatic Deploys` for automatic deploys or `Deploy  Branch` to deploy manually. Manually deployed branches will need re-deploying each time the repo is updated.
+
+![Heroku](assets/readme-images/deploy/6.png)
+
+10. Click `View` to view the deployed site.
+
+![Heroku](assets/readme-images/deploy/7.png)
+
+[Back to top](#table-of-content)
+
+## How To Fork The Repository On GitHub
+
+It is possible to do a independent copy of a GitHub Repository by forking the GitHub account. The copy can then be viewed and it is also possible to do changes in the copy without affecting the original repository. To fork the repository, take these steps:
+
+1. After logging in to GitHub, locate the repository. On the top right side of the page there is a 'Fork' button. Click on the button to create a copy of the original repository.
+
+[Back to top](#table-of-content)
+
+## Cloning The Project
+
+To clone and set up this project you need to follow the steps below.
+
+1. When you are in the repository, find the code tab and click it.
+2. To the left of the green GitPod button, press the 'code' menu. There you will find a link to the repository. Click on the clipboard icon to copy the URL.
+3. Use an IDE and open Git Bash. Change directory to the location where you want the cloned directory to be made.
+4. Type 'git clone', and then paste the URL that you copied from GitHub. Press enter and a local clone will be created.
+5. To be able to get the project to work you need to install the requirements. This can be done by using the command below:
+* ```pip3 install -r requirements.txt``` - This command downloads and install all required dependencies that is stated in the package.json file.
 
 [Back to top](#table-of-content)
