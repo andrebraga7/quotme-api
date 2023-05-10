@@ -79,6 +79,10 @@ All code was passed throught the CI PEP8 Linter with no issues. During the devel
 
 ## Manual testing
 Manual testing was performed throughout development, ensuring the database was being updated as expected when creating, reading, updating or deleting data, where appropriate.
+- If user is not authenticated only view options is available;
+- If user is logged in the create option is available;
+- If user is logged in and is owner the edit and delete options become available;
+- The stated above apply to all app views.
 
 [Back to top](#table-of-content)
 
